@@ -48,6 +48,19 @@ public class doublyLinkedList {
         return list;
     }
 
+    public static doublyLinkedList insertPos(doublyLinkedList list, int data, int pos) {
+        Node new_node = new Node(data);
+
+        int count=0;
+        if(list.head==null && pos==1){
+            new_node.next=null;
+            new_node.prev=null;
+            list.head=new_node;
+        }
+
+        return list;
+    }
+
     public static doublyLinkedList deleteFront(doublyLinkedList list) {
         if(list.head==null) {
             System.out.println("Invalid Operation!! List is empty!!");
